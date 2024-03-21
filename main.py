@@ -16,7 +16,6 @@ if __name__ == "__main__":
     metrics = scrape_all()
 
     # Open excel file
-    #excel_file_path = r"C:\Users\MarcoHui\Knightsbridge Asset Management, LLC\Knightsbridge - Documents\Portfolio Management\Kurt's Model Data\Kurt's model data.xlsx"
     workbook = openpyxl.load_workbook(excel_file_path)
     sheet = workbook["Kurt's models"]
     
