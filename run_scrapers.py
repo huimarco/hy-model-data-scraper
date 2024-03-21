@@ -21,4 +21,4 @@ def scrape_all():
     # Get date of previous day
     yesterday = date.today() - timedelta(days=1)
 
-    return yesterday, bofa_hy_total, nasdaq_composite, value_line_geo, nyse_adv_dec[0], nyse_adv_dec[1], crude_oil_futures
+    return yesterday, float(bofa_hy_total), float(nasdaq_composite), float(value_line_geo), int(nyse_adv_dec[0]), int(nyse_adv_dec[1]), float(crude_oil_futures)
