@@ -51,8 +51,8 @@ def scrape_nyse_adv_dec(url, headers):
     element = json.loads(str(response.text))
     
     # Extract relevant data from the JSON structure
-    adv = element["data"]["instrumentSets"][0]["instruments"][1]["latestClose"]
-    dec = element["data"]["instrumentSets"][0]["instruments"][2]["latestClose"]
+    adv = element["data"]["instrumentSets"][0]["instruments"][1]["latestClose"].replace(',','')
+    dec = element["data"]["instrumentSets"][0]["instruments"][2]["latestClose"].replace(',','')
     
     # Return the scraped data (Advances and Declines)
     return adv, dec
